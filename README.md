@@ -1,2 +1,5 @@
 # consumo-api-yugioh
- Estudando sobre consumo de APIs
+
+Dando início aos estudos sobre consumo de APIs
+
+https://pomptrash.github.io/consumo-api-yugioh/
