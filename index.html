@@ -12,18 +12,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="container d-flex gap-3 flex-column justify-content-center align-items-center" style="height: 100vh;">
-        <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100vw; max-width: 350px;">
-            <label for="inputCarta" class="form-label h3 fw-bold text-light" style="text-shadow: -2px 2px 2px black;">Cartas YuGiOh</label>
-            <input class="form-control" list="datalistOptions" id="inputCarta" placeholder="Pesquisar..." style="text-transform: uppercase;">
-            <button type="button" class="btn btn-primary my-2 w-50">Pesquisar</button>
+    <main class="container d-flex gap-3 flex-column  my-5" style="text-shadow: -2px 2px 2px black;">
+
+        <div class="container d-flex flex-column">
+            <label for="inputCarta" class="form-label h4 fw-bold text-light col-12">Cartas YuGiOh</label>
+            <div class="d-flex flex-wrap align-items-center gap-3">
+                <input class="form-control" list="datalistOptions" id="inputCarta" placeholder="Nome Da Carta">
+                <button type="button" class="btn btn-primary my-2" id="pesquisar">Pesquisar</button>
+                <button type="button" class="btn btn-primary my-2" id="cartaAleatoria">Carta aleatória</button>
+
+            </div>
+
             <datalist id="datalistOptions">
             </datalist>
         </div>
 
-        <div class="card " style="width: 18rem;">
-            <img src="card-backwards.png" class="card-img-top" alt="YuGiOh card" id="imgCarta">
+        <div class="container d-flex flex-wrap gap-4 justify-content-center">
+            <div class="card" style="height: fit-content;">
+                <img src="card-backwards.png" class="card-img-top" style="min-width: 250px; width: 250px; height: fit-content;" alt="YuGiOh card" id="imgCarta">
+            </div>
+            <div class="h5 text-light flex-grow-1" style="max-width: 800px; width: 500px; " id="detalhes">
+                <p class="fw-bold">ID: <span class=" ms-2" id="id"></span></p>
+                <p class="fw-bold">NOME: <span class=" ms-2" id="nome"></span></p>
+                <p class="fw-bold">TIPO: <span class=" ms-2" id="tipo"></span></p>
+                <p class="fw-bold">ATK: <span class=" ms-2" id="atk"></span></p>
+                <p class="fw-bold">DEF: <span class=" ms-2" id="def"></span></p>
+                <p class="fw-bold">LEVEL: <span class=" ms-2" id="level"></span></p>
+                <p class="fw-bold">RAÇA: <span class=" ms-2" id="raca"></span></p>
+                <p class="fw-bold">ATRIBUTO: <span class=" ms-2" id="atributo"></span></p>
+                <p class="fw-bold">DESCRIÇÃO: <span class="h6" id="desc"></span></p>
+            </div>
         </div>
+        
 
     </main>
 

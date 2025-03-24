@@ -1,3 +1,4 @@
 body {
-    background: black url(background.jpg) no-repeat center center / cover;
+    min-height: 100vh;
+    background: black url(background.png) no-repeat center center / cover;
 }
