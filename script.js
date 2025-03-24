@@ -13,6 +13,7 @@ const atributo = document.querySelector("#atributo")
 const desc = document.querySelector("#desc")
 const cartaAleatoria = document.querySelector("#cartaAleatoria")
 const pesquisar = document.querySelector("#pesquisar")
+const clearInputIcon = document.querySelector("#clearInputIcon")
 
 // FUNÇÃO PARA DEFINIR OS VALORES DOS ATRIBUTOS NO HTML DE ACORDO COM A CARTA
 function setValues(carta) {
@@ -54,8 +55,13 @@ consumirApi().then(dados => {
         pesquisar.addEventListener("click", e=>{
             if (carta.name.toUpperCase() == inputCarta.value.toUpperCase()){
                 setValues(carta)
-        }   
-    });
+            }   
+        })
+    })
+
+    // ÍCONE PARA LIMPAR O INPUT
+    clearInputIcon.addEventListener('click', e=>{
+        inputCarta.value = ""
     })
 })
 
