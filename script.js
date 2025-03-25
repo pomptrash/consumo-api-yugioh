@@ -62,6 +62,7 @@ consumirApi().then(dados => {
     // ÍCONE PARA LIMPAR O INPUT
     clearInputIcon.addEventListener('click', e=>{
         inputCarta.value = ""
+        inputCarta.focus()
     })
 })
 
