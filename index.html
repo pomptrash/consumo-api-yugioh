@@ -15,8 +15,8 @@
 </head>
 <body>
     <main class="container d-flex gap-3 flex-column  my-5" style="text-shadow: -2px 2px 2px black;">
-        <!-- CONTAINER COM INPUT E BOTÕES -->
-        <div class="container">
+        <!-- SECTION COM INPUT E BOTÕES -->
+        <section class="container">
             <label for="inputCarta" class="form-label h4 fw-bold text-light col-12">Cartas YuGiOh</label>
             <div class="d-flex flex-column flex-wrap gap-3">
                 <div class="d-flex align-items-center inputContainer">
@@ -25,14 +25,24 @@
                 </div>
 
                 <div>
-                    <button type="button" class="btn btn-primary my-2" id="pesquisar">Pesquisar</button>
-                    <button type="button" class="btn btn-primary my-2" id="cartaAleatoria">Carta aleatória</button>
+                    <button type="button" class="btn btn-primary my-2" id="btnPesquisar">Pesquisar</button>
+                    <button type="button" class="btn btn-primary my-2" id="btnCartaAleatoria">Carta aleatória</button>
+                    <button type="button" class="btn btn-primary my-2" id="btnVerDeck">Ver Deck</button>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- CONTAINER PARA APRESENTAÇÃO DA CARTA -->
-        <div class="container d-flex flex-wrap gap-4 justify-content-center">
+        <!-- SECTION DECK DE CARTAS -->
+        <section class="container deckCartasContainer my-5 displayDeck">
+            <h5 class="text-light">Total de Cartas (<span id="deckAmout"></span>)</h5>
+            <h5 class="text-light">ATK total (<span id="deckAtkAmount"></span>)</h5>
+            <h5 class="text-light">DEF total (<span id="deckDefAmount"></span>)</h5>
+            <div class="d-flex flex-wrap gap-1" id="deckCartasSection">
+            </div>
+        </section>
+
+        <!-- SECTION PARA APRESENTAÇÃO DA CARTA -->
+        <section class="container d-flex flex-wrap gap-4 justify-content-center">
             <div class="card" style="height: fit-content;">
                 <img src="card-backwards.png" class="card-img-top" style="min-width: 250px; width: 250px; height: fit-content;" alt="YuGiOh card" id="imgCarta">
             </div>
@@ -47,9 +57,9 @@
                 <p class="fw-bold">RAÇA: <span class=" ms-2" id="raca"></span></p>
                 <p class="fw-bold">ATRIBUTO: <span class=" ms-2" id="atributo"></span></p>
                 <p class="fw-bold">DESCRIÇÃO: <span class="h6" id="desc"></span></p>
+                <button type="button" class="btn btn-primary my-2" id="btnAdicionarDeck" >Adicionar ao Deck</button>
             </div>
-        </div>
+        </section>
     </main>
-
 </body>
 </html>

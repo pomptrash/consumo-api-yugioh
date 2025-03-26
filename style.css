@@ -22,3 +22,23 @@ body {
     right: 0;
     cursor: pointer;
 }
+
+.cardDeck{
+    min-width: 110px; 
+    width: 110px; 
+    height: fit-content;
+    background-color: #1D3C7C !important;
+    border-color: white !important;    
+}
+
+.cardDeck:hover {
+    transform: scale(1.1);
+}
+.displayDeck {
+    display: none;
+}
+
+button {
+    background-color: #1D3C7C  !important;
+    border-color: white !important;
+}
