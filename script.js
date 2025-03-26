@@ -139,9 +139,9 @@ btnVerDeck.addEventListener('click', e=>{
 // FUNÇÃO PARA MOSTRAR O DECK DE CARTAS NO CONTAINER DESTINADO
 function mostrarDeck(deck){
     deckCartasSection.innerHTML = ''
-    deckCartasContainer.classList.toggle('displayDeck')
-    verifyDisplayDeckt()
     if (deck.length > 0){
+        deckCartasContainer.classList.toggle('displayDeck')
+        verifyDisplayDeckt()
         deck.forEach(carta => {            
             // CRIANDO O ELEMENTO HTML PARA CADA CARTA DO DECK
             const card = document.createElement('div')
