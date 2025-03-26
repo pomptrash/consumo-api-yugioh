@@ -109,7 +109,7 @@ function randomizer(length){
     return randomIndex
 }
 
-// FUNÇÃO PARA ADICIONAR CARTA AO ARRAY DECK E CRIAR ELEMENTOS HTML NO CONTAINER DECK DE CARTAS
+// FUNÇÃO PARA ADICIONAR CARTA AO ARRAY DECK
 function pushToDeck(carta, deck){
     if(deck.length < 15){
         deck.push(carta)
@@ -136,7 +136,7 @@ btnVerDeck.addEventListener('click', e=>{
     mostrarDeck(deckCartas)
 })
 
-// FUNÇÃO PARA MOSTRAR O DECK DE CARTAS NO CONTAINER DESTINADO
+// FUNÇÃO PARA CRIAR ELEMENTOS HTML REFERENTES ÀS CARTAS NA SECTION DECK DE CARTAS
 function mostrarDeck(deck){
     deckCartasSection.innerHTML = ''
     if (deck.length > 0){
@@ -170,7 +170,7 @@ function mostrarDeck(deck){
                 setValues(carta)
             })
     
-            // REMOVE A CARTA AO DAR UM DUPLO CLIQUE
+            // EVENTO DO ÍCONE PARA REMOVER A CARTA
             removeCardIcon.addEventListener('click', e=>{
                 if (confirm(`Tem certeza que deseja remover a carta '${carta.name}' do seu deck?`)){
                     removeFromDeck(carta, deck)
